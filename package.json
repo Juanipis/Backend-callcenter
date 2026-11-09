@@ -1,0 +1,31 @@
+{
+  "name": "callcenter-anti-bureaucracy",
+  "version": "1.0.0",
+  "description": "Backend agente IA anti-burocracia: PostgREST + Twilio Voice",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "watch:worker": "ts-node-dev --respawn --transpile-only src/worker.ts"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@mastra/core": "^1.2.0",
+    "@supabase/supabase-js": "^2.95.3",
+    "dotenv": "^17.2.4",
+    "express": "^4.18.2",
+    "pg": "^8.11.3",
+    "twilio": "^4.19.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.0",
+    "@types/pg": "^8.16.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.0"
+  }
+}
